@@ -12,7 +12,8 @@
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
   },
   "dependencies": {
     "vue": "^3.5.22"
@@ -34,7 +35,9 @@
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.37.0",
     "eslint-plugin-vue": "^10.5.0",
+    "husky": "^9.1.7",
     "jiti": "^2.6.1",
+    "lint-staged": "^16.2.4",
     "npm-run-all2": "^8.0.4",
     "playwright": "^1.56.0",
     "prettier": "^3.6.2",
