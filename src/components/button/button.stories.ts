@@ -7,8 +7,13 @@ const meta = {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'select', options: ['default', 'outline', 'ghost', 'destructive'] },
+    variant: {
+      control: 'select',
+      options: ['default', 'outline', 'secondary', 'ghost', 'destructive', 'link'],
+    },
+    size: { control: 'select', options: ['default', 'sm', 'lg'] },
   },
+  args: { size: 'default' },
 } satisfies Meta<typeof Button>
 
 export default meta
@@ -28,6 +33,13 @@ export const Outline: Story = {
   },
 }
 
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    label: 'Secondary',
+  },
+}
+
 export const Ghost: Story = {
   args: {
     variant: 'ghost',
@@ -39,5 +51,12 @@ export const Destructive: Story = {
   args: {
     variant: 'destructive',
     label: 'Destructive',
+  },
+}
+
+export const Link: Story = {
+  args: {
+    variant: 'link',
+    label: 'Link',
   },
 }
