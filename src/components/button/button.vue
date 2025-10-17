@@ -8,7 +8,6 @@ withDefaults(
   {
     variant: 'default',
     size: 'default',
-    label: 'Button',
   },
 )
 </script>

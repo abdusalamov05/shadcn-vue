@@ -3,7 +3,9 @@ import { mount } from '@vue/test-utils'
 import Button from './button.vue'
 
 test('should render default label "Button"', () => {
-  const wrapper = mount(Button)
+  const wrapper = mount(Button, {
+    props: { label: 'Button' },
+  })
   expect(wrapper.text()).toBe('Button')
 })
 
@@ -14,7 +16,9 @@ test('should render custom label', () => {
 })
 
 test('should use base class "button" and no extra variant/size classes when default', () => {
-  const wrapper = mount(Button)
+  const wrapper = mount(Button, {
+    props: { label: 'Button' },
+  })
   expect(wrapper.classes()).toEqual(['button'])
 })
 
